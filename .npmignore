@@ -1,0 +1,47 @@
+# .npmignore
+
+# Development
+example/
+.github/
+docs/
+scripts/
+
+# Build artifacts
+android/build/
+android/.gradle/
+android/.cxx/
+ios/build/
+*.log
+*.tsbuildinfo
+
+# Tests
+__tests__/
+**/__tests__/
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+
+# Config
+.eslintrc.js
+.prettierrc
+.watchmanconfig
+tsconfig.json
+babel.config.js
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation (keep README.md)
+PUBLISHING_CHECKLIST.md
+CONTRIBUTING.md
+
+# Misc
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

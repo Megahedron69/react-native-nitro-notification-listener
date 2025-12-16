@@ -1,0 +1,104 @@
+name: 💡 Feature request
+description: Suggest an idea or enhancement for this library.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Feature request
+
+        👋 Hi!
+
+        **Please fill the following carefully before opening a new feature request ❗**
+
+  - type: checkboxes
+    attributes:
+      label: Before submitting
+      description: Please check the following
+      options:
+        - label: I checked the existing issues and discussions for similar feature requests
+          required: true
+        - label: This feature doesn't exist in the current version
+          required: true
+        - label: I checked [FUTURE_FEATURES.md](https://github.com/Megahedron69/react-native-nitro-notification-listener/blob/main/FUTURE_FEATURES.md) and this isn't already planned
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your feature request related to a problem?
+      description: A clear and concise description of what the problem is.
+      placeholder: I'm always frustrated when...
+    validations:
+      required: false
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Describe alternatives you've considered
+      description: A clear and concise description of any alternative solutions or features you've considered.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Critical (blocking my work)
+        - High (would significantly improve my app)
+        - Medium (nice to have)
+        - Low (minor improvement)
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: Describe how this feature would be used in your application
+      placeholder: |
+        I'm building an app that...
+        This feature would allow me to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: api-proposal
+    attributes:
+      label: API Proposal (optional)
+      description: If you have ideas about how the API should look, share them here
+      placeholder: |
+        ```typescript
+        await NotificationListenerModule.newFeature({ ... })
+        ```
+      render: typescript
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context or screenshots about the feature request here.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Are you willing to contribute?
+      description: Would you be interested in implementing this feature yourself?
+      options:
+        - label: Yes, I'd like to implement this feature
+        - label: I can help with testing
+        - label: I can help with documentation

@@ -1,0 +1,28 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<application>
+
+    <!-- Auto-initializer for context - no user configuration needed -->
+    <provider
+      android:name=".ContextInitializer"
+      android:authorities="${applicationId}.nitro.notification.initializer"
+      android:exported="false"
+      android:initOrder="100" />
+
+    <service
+      android:name=".NotificationListenerService"
+      android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+      android:exported="false">
+
+      <intent-filter>
+        <action android:name="android.service.notification.NotificationListenerService" />
+      </intent-filter>
+
+      <!-- Enable all notification types including real-time (ongoing) -->
+      <meta-data
+        android:name="android.service.notification.default_filter_types"
+        android:value="conversations|alerting|ongoing|silent" />
+
+    </service>
+
+  </application>
+</manifest>

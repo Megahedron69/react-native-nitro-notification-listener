@@ -1,0 +1,103 @@
+name: 🐛 Bug report
+description: Report a reproducible bug or regression in this library.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Bug report
+
+        👋 Hi!
+
+        **Please fill the following carefully before opening a new issue ❗**
+        *(Your issue may be closed if it doesn't provide the required pieces of information)*
+
+  - type: checkboxes
+    attributes:
+      label: Before submitting a new issue
+      description: Please perform simple checks first.
+      options:
+        - label: I tested using the latest version of the library, as the bug might be already fixed.
+          required: true
+        - label: I checked for possible duplicate issues, with possible answers.
+          required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Bug summary
+      description: |
+        Provide a clear and concise description of what the bug is.
+        If needed, you can also provide other samples: error messages / stack traces, screenshots, gifs, etc.
+    validations:
+      required: true
+  - type: input
+    id: library-version
+    attributes:
+      label: Library version
+      description: What version of the library are you using?
+      placeholder: 'x.x.x'
+    validations:
+      required: true
+  - type: dropdown
+    id: project-type
+    attributes:
+      label: Project type
+      description: What type of React Native project are you using?
+      options:
+        - React Native (bare workflow)
+        - Expo (managed workflow)
+        - Expo (bare workflow)
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      description: Which platform are you running on?
+      options:
+        - Android
+        - iOS
+    validations:
+      required: true
+  - type: input
+    id: react-native-version
+    attributes:
+      label: React Native version
+      description: What version of React Native are you using?
+      placeholder: '0.79.x'
+    validations:
+      required: true
+  - type: input
+    id: expo-version
+    attributes:
+      label: Expo SDK version (if applicable)
+      description: If you're using Expo, what SDK version are you on?
+      placeholder: 'SDK 51'
+    validations:
+      required: false
+  - type: textarea
+    id: react-native-info
+    attributes:
+      label: Environment info
+      description: Run `react-native info` in your terminal and paste the results here.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: |
+        You must provide a clear list of steps and code to reproduce the problem.
+      value: |
+        1. …
+        2. …
+    validations:
+      required: true
+  - type: input
+    id: reproducible-example
+    attributes:
+      label: Reproducible example repository
+      description: Please provide a link to a repository on GitHub with a reproducible example.
+    validations:
+      required: false

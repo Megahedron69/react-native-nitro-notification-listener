@@ -1,0 +1,17 @@
+{
+  "$schema": "https://nitro.margelo.com/nitro.schema.json",
+  "cxxNamespace": ["nitronotificationlistener"],
+  "ios": {
+    "iosModuleName": "NitroNotificationListener"
+  },
+  "android": {
+    "androidNamespace": ["nitronotificationlistener"],
+    "androidCxxLibName": "NitroNotificationListener"
+  },
+  "autolinking": {
+    "NotificationListener": {
+      "kotlin": "HybridNotificationListener"
+    }
+  },
+  "ignorePaths": ["**/node_modules"]
+}
