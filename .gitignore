@@ -82,6 +82,9 @@ lib/
 .cache
 *.tsbuildinfo
 
+# npm package tarballs
+*.tgz
+
 # Example app - ignore node_modules and build outputs but keep source
 example/node_modules/
 example/.expo/
